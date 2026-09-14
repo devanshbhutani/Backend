@@ -1,0 +1,96 @@
+// PHASE 2
+// today we will study data modellig for backend with mongoose
+// mongoose, what and why 
+// mongoose is a library that allows us to model our data in a more structured way, providing a schema-based solution to model our application data. It helps in defining the shape of the documents within a collection and provides built-in type casting, validation, query building, and business logic hooks.
+// moon modeler 
+// eraser.io
+
+
+// first always thought of the data that we want to store in our database, and then we can create a schema for it using mongoose. A schema is a blueprint for our data, defining the structure and types of the fields in our documents.
+
+// ex: we want to make todo app 
+
+
+// using stackblitz
+
+// npm install mongoose
+
+// we make a models folder and create a file called todo.model.js and user.model.js
+
+// user.models.js 
+// todo.models.js
+
+// user.model.js
+// import mongoose from 'mongoose';
+// const userSchema = new mongoose.Schema({
+//     name: {
+//         type: String,
+//         required: true,
+//         unique: true,
+//         lowercase: true 
+//     },
+//     email: {
+//         type: String,
+//         required: true,
+//         unique: true
+//     },
+//     password: {
+//         type: String,
+//         required: [true, 'Password is required']
+//     }
+// }, {timestamps: true}
+// )
+//  this above line means that we are creating a new schema for our user model, and we are defining the fields that we want to store in our database. We are also specifying the type of each field and whether it is required or not.
+//  export const User = mongoose.model('User', userSchema); 
+// kya model banau aur kis ke basis pe banau 
+
+// we can read documentation of mongoose to learn more about the different types of fields and options that we can use in our schema.
+// Validation , timestamps, virtuals, methods, statics, middleware, etc
+
+
+// todo.model.js
+
+// import mongoose from 'mongoose';
+// const todoSchema = new mongoose.Schema({
+// content: {
+//     type: String,
+//     required: true
+// },
+// completed: {
+//     type: Boolean,
+//     default: false
+// }
+// createdBy: {
+//     type: mongoose.Schema.Types.ObjectId,
+//     ref: 'User',
+//     required: true   
+// }
+// subTodos: [{
+//     type: mongoose.Schema.Types.ObjectId,
+//     ref: 'SubTodo'
+// }]
+// }, {timestamps: true})
+// schema is a method which expect object. 
+// export const Todo = mongoose.model('Todo', todoSchema);
+
+
+// subTodo.model.js
+
+// import mongoose from 'mongoose';
+// const subTodoSchema = new mongoose.Schema({
+// content: {
+//     type: String,
+//     required: true
+// },
+// completed: {
+//     type: Boolean,
+//     default: false
+// },
+// createdBy: {
+//     type: mongoose.Schema.Types.ObjectId,
+//     ref: 'User',
+//     required: true   
+// }
+// }, {timestamps: true})
+// export const SubTodo = mongoose.model('SubTodo', subTodoSchema); 
+
