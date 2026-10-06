@@ -56,6 +56,7 @@
 
 // first index.js 
 // then we also need some packages like cookie-parser, cors
+// npm install cookie-parser cors
 
 // middleware :  why where
 // so middleware is a function that has access to the request object (req), the response object (res), and the next middleware function in the application’s request-response cycle. Middleware functions can perform the following tasks:
@@ -66,3 +67,8 @@
 
 // if the current middleware function does not end the request-response cycle, it must call next() to pass control to the next middleware function. Otherwise, the request will be left hanging.
 // req, res, err, next
+
+
+// utitils files : we made this file because we are going to use some utility functions in our application. Utility functions are functions that perform common tasks that can be reused throughout the application. By creating a separate utils file, we can keep our code organized and avoid duplicating code in multiple places. This makes it easier to maintain and update our code in the future.
+
+
