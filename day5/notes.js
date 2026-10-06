@@ -55,3 +55,14 @@
 // 4. Validation: Validation is the process of checking if the input data provided by the user meets certain criteria before processing it. In a Node.js application, you can use validation libraries or write custom validation logic to ensure that the data being sent to your API endpoints is valid and meets the required format. This helps prevent invalid data from being stored in your database and ensures that your application behaves as expected.
 
 // first index.js 
+// then we also need some packages like cookie-parser, cors
+
+// middleware :  why where
+// so middleware is a function that has access to the request object (req), the response object (res), and the next middleware function in the application’s request-response cycle. Middleware functions can perform the following tasks:
+// Execute any code.
+// Make changes to the request and the response objects.
+// End the request-response cycle.
+// Call the next middleware function in the stack.
+
+// if the current middleware function does not end the request-response cycle, it must call next() to pass control to the next middleware function. Otherwise, the request will be left hanging.
+// req, res, err, next
