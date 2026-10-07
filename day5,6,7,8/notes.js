@@ -72,3 +72,32 @@
 // utitils files : we made this file because we are going to use some utility functions in our application. Utility functions are functions that perform common tasks that can be reused throughout the application. By creating a separate utils file, we can keep our code organized and avoid duplicating code in multiple places. This makes it easier to maintain and update our code in the future.
 
 
+
+
+// making of models
+// in this project we are only making two models video and user. The video model will have the following fields:
+// title: String
+// description: String
+// url: String
+// createdAt: Date
+// and many more
+
+// The user model will have the following fields:
+// name: String
+// email: String
+// password: String
+// createdAt: Date 
+// and many more
+
+// we are going to use mongoose to create our models. Mongoose is an ODM (Object Data Modeling) library for MongoDB and Node.js. It provides a straight-forward, schema-based solution to model your application data. It includes built-in type casting, validation, query building, business logic hooks and more, out of the box.
+
+
+// mongoose-aggregate-paginate-v2 is a plugin for Mongoose that provides pagination functionality for aggregate queries. It allows you to easily paginate the results of an aggregate query, which can be useful when dealing with large datasets. The plugin provides a simple API for specifying the page number and page size, and it automatically calculates the total number of pages and returns the appropriate subset of results for the requested page. This can help improve performance and reduce the amount of data that needs to be sent to the client at once. 
+
+//bycrpt  is a popular library for hashing passwords in Node.js. It provides a simple and secure way to hash passwords before storing them in the database.
+//bycryptjs is a JavaScript implementation of the bcrypt password hashing algorithm. It is a pure JavaScript implementation that can be used in both Node.js and browser environments. It provides the same functionality as the original bcrypt library, but it is written entirely in JavaScript and does not require any native dependencies. This makes it easier to use in environments where native dependencies may not be available or may be difficult to install.
+
+//jwt is a popular library for implementing JSON Web Tokens (JWT) in Node.js applications. JWT is a standard for securely transmitting information between parties as a JSON object. It is commonly used for authentication and authorization in web applications. The jsonwebtoken library provides a simple API for creating, signing, and verifying JWTs in Node.js applications. It supports various signing algorithms and allows you to customize the payload and expiration of the tokens. This makes it easy to implement secure authentication and authorization mechanisms in your application.
+//jwt.io is a website that provides a simple and easy-to-use interface for generating, decoding, and verifying JSON Web Tokens (JWTs). It allows you to quickly create JWTs with custom payloads and headers, and it also provides a way to decode and verify existing JWTs. This can be useful for testing and debugging JWT-based authentication and authorization mechanisms in your application. The website also provides information about the structure of JWTs and the different signing algorithms that can be used.
+
+//pre hook is a middleware function that is executed before a certain event occurs in Mongoose. It allows you to perform certain actions or modify data before it is saved to the database. For example, you can use a pre-save hook to hash a user's password before it is saved to the database. Pre hooks are defined on the schema level and can be used for various events such as save, validate, remove, and update. They are useful for implementing custom logic and ensuring data integrity in your application.
